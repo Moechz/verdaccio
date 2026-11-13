@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "verdacciodocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[zh-cn]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio 是一个轻量的私有 npm 源：可以发布自己的包、缓存公共包，公共源慢或不可达时安装依然能跑。整个应用只有一个容器、不需要数据库，包都保存在应用数据目录，自带一个列出已发布包的小网页。"
+release_note = "1. 首个版本：基于 Docker Hub 的 Verdaccio 7.1.0，以非 root 容器运行。私有 npm 源，带包缓存与网页界面，数据保存在应用数据目录，无需数据库。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。把 npm/yarn 的 registry 指向已发布的端口（http://<NAS-IP>:<端口>/），发布前先执行 `npm adduser --registry ...` 创建账号；默认允许匿名安装、发布需要登录。包与元数据保存在 DockerAppData/verdacciodocker/storage。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。卸载并删除数据前请先备份 storage 目录。"
+
+[zh-hk]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio 是一個輕量的私有 npm 源：可以發佈自己的套件、快取公共套件，公共源慢或不可達時安裝依然能跑。整個應用只有一個容器、不需要資料庫，套件都保存在應用資料目錄，自帶一個列出已發佈套件的小網頁。"
+release_note = "1. 首個版本：基於 Docker Hub 的 Verdaccio 7.1.0，以非 root 容器運行。私有 npm 源，帶套件快取與網頁介面，資料保存在應用資料目錄，無需資料庫。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。把 npm/yarn 的 registry 指向已發佈的端口（http://<NAS-IP>:<端口>/），發佈前先執行 `npm adduser --registry ...` 建立帳號；預設允許匿名安裝、發佈需要登入。套件與中繼資料保存在 DockerAppData/verdacciodocker/storage。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。解除安裝並刪除資料前請先備份 storage 目錄。"
+
+[fr-fr]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[de-de]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[it-it]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[es-es]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[hu-hu]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[ja-jp]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[ko-kr]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[pl-pl]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[ru-ru]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[tr-tr]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[pt-pt]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[ar-sa]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[cs-cz]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[he-il]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[id-id]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[nb-no]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[nl-nl]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[sv-se]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[th-th]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+
+[vi-vn]
+name         = "Verdaccio"
+auth         = "verdaccio"
+version      = "@@VERSION@@"
+descript     = "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published."
+release_note = "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required."
+important    = "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal."
+

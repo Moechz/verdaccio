@@ -1,0 +1,110 @@
+{
+  "app_id": "verdacciodocker",
+  "title": "Verdaccio",
+  "image": "verdaccio/verdaccio:7.1.0",
+  "repo_name": "verdaccio",
+  "mode": "plain",
+  "container_port": 4873,
+  "category": [
+    "Development_Tools"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/verdacciodocker/storage",
+      "container": "/verdaccio/storage"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai"
+  },
+  "auth": "verdaccio",
+  "upstream_url": "https://github.com/verdaccio/verdaccio",
+  "upstream_license": "MIT",
+  "descript": "Verdaccio is a lightweight private npm registry: publish your own packages, cache public ones, and keep installs working even when the public registry is slow. It runs as a single container with no database, stores packages in the application data folder, and serves a small web UI that lists what you have published.",
+  "release_note": "1. First release: Verdaccio 7.1.0 from Docker Hub as a non-root container. Private npm registry with package cache, web UI and storage in the application data folder; no database required.",
+  "important": "Requires DockerEngine (installed automatically if missing). Point npm/yarn at the published port (http://<NAS-IP>:<port>/) and run `npm adduser --registry ...` before publishing; anonymous install is allowed, publishing requires a login by default. Packages and metadata live in DockerAppData/verdacciodocker/storage. The UI is plain HTTP - put it behind a TLS reverse proxy before exposing it to the internet. Back up the storage folder before uninstalling with data removal.",
+  "probe": {
+    "user_in_image": "10001",
+    "entrypoint": [
+      "uid_entrypoint"
+    ],
+    "cmd": [
+      "/bin/sh",
+      "-c",
+      "verdaccio --config /verdaccio/conf/config.yaml --listen $VERDACCIO_PROTOCOL://$VERDACCIO_ADDRESS:$VERDACCIO_PORT"
+    ],
+    "exposed_ports": [
+      4873
+    ],
+    "declared_volumes": [
+      "/verdaccio/storage"
+    ],
+    "image_healthcheck": [],
+    "digest": "verdaccio/verdaccio@sha256:c1b1b86154b43a4e1861bc7a4496d4977aa43c8bdb5db49b68445f8a9273729f",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "wget",
+    "trial_run": {
+      "ok": true,
+      "http_code": "200",
+      "state": "running",
+      "paths": [],
+      "host_port": 18000,
+      "log_tail": "info --- using config file: /verdaccio/conf/config.yaml\ninfo -=- local storage path: /verdaccio/storage/data/.verdaccio-db.json\ninfo -=- plugin @verdaccio/local-storage successfully loaded (storage)\ninfo -=- no private database found, recreating new one on /verdaccio/storage/data/.verdaccio-db.json\ninfo --- plugin @verdaccio/package-filter successfully loaded (filter)\ninfo --- using htpasswd file: /verdaccio/storage/htpasswd\ninfo --- plugin verdaccio-htpasswd successfully loaded (authentication)\ninfo --- plugin verdaccio-audit successfully loaded (middleware)\ninfo --- plugin @verdaccio/ui-theme successfully loaded (theme)\ninfo --- http address: http://0.0.0.0:4873/\ninfo --- version: 7.1.0\ninfo --- log level: http\ninfo --- server started\ninfo <-- 172.17.0.1 requested 'GET /'\nhttp <-- 200, user: null(172.17.0.1), req: 'GET /', bytes: 0/803",
+      "files_in_mounts": "/tmp/tosdocker-trial-1794591187/verdaccio_storage/data/.verdaccio-db.json"
+    },
+    "docker_hub": {},
+    "github": {
+      "owner": "verdaccio",
+      "repo": "verdaccio",
+      "description": "A lightweight Node.js private proxy registry",
+      "license": "MIT",
+      "homepage": "https://www.verdaccio.org/"
+    }
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "wget -q -O /dev/null http://127.0.0.1:4873/-/ping || exit 1"
+  ],
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "verdacciodocker",
+  "github_repo": "verdaccio",
+  "upstream_version": "7.1.0",
+  "release_tag_prefix": "v",
+  "version": "7.1.0-1",
+  "help": "https://github.com/Moechz/verdaccio/issues",
+  "official": "https://github.com/verdaccio/verdaccio",
+  "license": "MIT",
+  "docker_socket": false,
+  "group_add": [],
+  "healthcheck_start_period": "40s",
+  "http_path": "/-/ping",
+  "translations": {
+    "zh-cn": {
+      "descript": "Verdaccio 是一个轻量的私有 npm 源：可以发布自己的包、缓存公共包，公共源慢或不可达时安装依然能跑。整个应用只有一个容器、不需要数据库，包都保存在应用数据目录，自带一个列出已发布包的小网页。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。把 npm/yarn 的 registry 指向已发布的端口（http://<NAS-IP>:<端口>/），发布前先执行 `npm adduser --registry ...` 创建账号；默认允许匿名安装、发布需要登录。包与元数据保存在 DockerAppData/verdacciodocker/storage。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。卸载并删除数据前请先备份 storage 目录。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 Verdaccio 7.1.0，以非 root 容器运行。私有 npm 源，带包缓存与网页界面，数据保存在应用数据目录，无需数据库。"
+    },
+    "zh-hk": {
+      "descript": "Verdaccio 是一個輕量的私有 npm 源：可以發佈自己的套件、快取公共套件，公共源慢或不可達時安裝依然能跑。整個應用只有一個容器、不需要資料庫，套件都保存在應用資料目錄，自帶一個列出已發佈套件的小網頁。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。把 npm/yarn 的 registry 指向已發佈的端口（http://<NAS-IP>:<端口>/），發佈前先執行 `npm adduser --registry ...` 建立帳號；預設允許匿名安裝、發佈需要登入。套件與中繼資料保存在 DockerAppData/verdacciodocker/storage。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。解除安裝並刪除資料前請先備份 storage 目錄。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 Verdaccio 7.1.0，以非 root 容器運行。私有 npm 源，帶套件快取與網頁介面，資料保存在應用資料目錄，無需資料庫。"
+    }
+  },
+  "data_notes": "`/verdaccio/storage` (mounted from `DockerAppData/verdacciodocker/storage`) keeps the published tarballs and the package metadata (`.verdaccio-db.json`, per-package folders).",
+  "design_notes": [
+    "**No database.** Verdaccio stores packages as files plus a small JSON index, so a backup is a folder copy.",
+    "**One port for UI and registry.** The web UI and the npm registry share port 4873."
+  ],
+  "limitations": [
+    "- The UI/registry is plain HTTP; use a TLS reverse proxy before exposing it to the internet.",
+    "- Publishing requires an account (`npm adduser`); the package does not create one for you.",
+    "- Large private packages grow the storage folder; check free space on the NAS when caching many public packages."
+  ],
+  "host_port": 8007
+}
